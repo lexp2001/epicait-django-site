@@ -1,0 +1,74 @@
+ /* Underline effect */
+
+  .snip1135 * {
+    box-sizing: border-box;
+  }
+  .snip1135 li {
+    display: inline-block;
+    list-style: outside none none;
+    padding: 0;
+  }
+  .snip1135 a {
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    text-decoration: none;
+  }
+  .snip1135 a:before,
+  .snip1135 a:after {
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  .snip1135 a:before {
+    bottom: 0;
+    display: block;
+    height: 1px;
+    width: 0%;
+    content: "";
+    background-color: #ffffff;
+  }
+  .snip1135 a:after {
+    left: 0;
+    top: 0;
+    padding: 0;
+    position: absolute;
+    content: attr(data-hover);
+    color: #ffffff;
+    white-space: nowrap;
+    max-width: 0%;
+    overflow: hidden;
+  }
+  .snip1135 a:hover:before,
+  .snip1135 .current a:before {
+    opacity: 1;
+    width: calc(100% - 16px);
+  }
+  .snip1135 a:hover:after,
+  .snip1135 .current a:after {
+    max-width: calc(100% - 16px);
+  }
+
+  /* Navbar stick, this class is added on scroll */
+
+.fixed-top {
+    top: -80px;
+}
+nav {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .snip1135 a:before {
+        height: 0;
+        width: 0;
+        background-color: transparent;
+      }
+
+      .snip1135 a:after {
+        left: 0;
+        top: 0;
+        background-color: transparent;
+      }
+
+}

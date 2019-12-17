@@ -1,0 +1,194 @@
+{% load cms_tags sekizai_tags %}
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+    <link rel="stylesheet" href="{% static "css/menu_effect.css" %}">
+    <link rel="stylesheet" href="{% static "css/typing_effect.css" %}">
+
+    <title>{% page_attribute "page_title" %}</title>
+    {% render_block "css" %}
+</head>
+
+<body>
+    {% cms_toolbar %}
+
+    <!-- Navbar: Logo and Menu -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block">
+                <!-- hidden spacer to center brand on mobile --></span>
+            <a class="navbar-brand" href="#">
+                {% placeholder "Epica Logo" %}
+            </a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap type-navbar">
+                <li class="nav-item">
+                    <a href="#Epica Model" class="nav-link">Epica Model</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#About Us" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Technology Capital" class="nav-link">Technology Capital</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Video" class="nav-link">The Right Fit</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Contact" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Slider -->
+    <section id="Hero" class="container-fluid hero"
+        style="display: flex; align-items: center; background-color: black;">
+        <div class="row">
+            <div class="col-12">
+
+                <!--Extra Large-->
+                <div class="block d-none d-xl-block" style="padding-top: 80px;">
+                    <h1
+                        style="color: white; font-size: 100px; line-height: 77px; margin-left: 1.7em; font-weight: 600;">
+                        Nearshore
+                        <span style="font-size: 70px; color: #ff3300;">for</span>
+                        <br />
+                        Startups
+                        <br />
+                        <span style="font-size: 70px;">feat</span>
+                        <br />
+                        <span style="color: #ff3300; line-height: 140px;">
+                            <b>Technology Capital</b>
+                        </span>
+                    </h1>
+                </div>
+
+                <!--Large-->
+                <div class="block d-none d-lg-block d-xl-none" style="padding-top: 80px;">
+                    <h1
+                        style="color: white; font-size: 100px; line-height: 77px; margin-left: 1.7em; font-weight: 600;">
+                        Nearshore
+                        <span style="font-size: 70px; color: #ff3300;">for</span>
+                        <br />
+                        Startups
+                        <br />
+                        <span style="font-size: 70px;">feat</span>
+                        <br />
+                        <span style="color: #ff3300; line-height: 100px;">
+                            <b>Technology Capital</b>
+                        </span>
+                    </h1>
+                </div>
+
+                <!--Medium-->
+                <div class="block d-none d-md-block d-lg-none" style="padding-top: 80px;">
+                    <h1 style="color: white; font-size: 77px; line-height: 77px; margin-left: 1.7em; font-weight: 600;">
+                        Nearshore
+                        <span style="font-size: 49px; color: #ff3300;">for</span>
+                        <br />
+                        Startups
+                        <br />
+                        <span style="font-size: 49px;">feat</span>
+                        <br />
+                        <span style="color: #ff3300; line-height: 77px;">
+                            <b>Technology Capital</b>
+                        </span>
+                    </h1>
+                </div>
+
+                <!--Small-->
+                <div class="block d-block d-md-none" style="padding-left: 1.4em;">
+                    <h1 style="color: white; font-size: 56px; line-height: 0.9em;">
+                        Nearshore
+                        <div>
+                            <span style="color: #ff3300; font-size: 35px;">for</span>
+                            <span style="font-size: 49px;">Startups</span>
+                        </div>
+                        <span style="font-size: 35px;">feat</span>
+                    </h1>
+                    <h1 style="color: white; font-size: 52px; line-height: 0.9em; margin-top: .4em;">
+                        <span style="color: #ff3300; font-size: 49px;">
+                            <b>Technology Capital</b>
+                        </span>
+                    </h1>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Epica Model -->
+    <section id="Epica Model" class="container-fluid d-flex justify-content-center" style="background-color:white;">
+        <div class="row container mtb">
+            <div class="col-lg-5">
+                <img src="img/re_skull.jpg" style="max-width: 100%;">
+            </div>
+            <div class="col-lg-7">
+                <h1 class="title">Epica Model</h1>
+                <p>
+                    <strong>Epica model creates Software Products from problem solving, to Tech Capital, steering the
+                        development
+                        cycle and relieving StartUp founders from hand holding so you can use that time to build your
+                        business.</strong></p>
+                <p>
+                    <strong>EPICA’s HR model </strong>takes cues from <strong><i>“Direct trade”.</i></strong> our
+                    philosophy is
+                    cemented in Conscious Capitalism, we aim to bring opportunity to talented people all over Latin
+                    America in a
+                    way that is meaningful to them. Responding to the notion that today's world is witnessing one of the
+                    biggest
+                    transformations that may have either devastating effects on LATAM societies if opportunities remain
+                    out of
+                    reach or, could mean that talent drain no longer needs to happen, <strong>it is 2019 </strong>and
+                    opportunity
+                    can be anywhere!</p>
+                <p>
+                    <strong>Being a 100% remote company </strong>also means the talent pool extends to every corner of
+                    Latin
+                    America and is not circumvented by any particular tech cluster, allowing us to source and hire
+                    expert talent
+                    in an elastic way according to project needs and integrate them into Epica’s technology-agnostic
+                    process that
+                    guarantees the delivery of “Technology Capital” you can actually use to lean your company growth
+                    against.</p>
+            </div>
+        </div>
+    </section>
+
+
+    {% render_block "js" %}
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

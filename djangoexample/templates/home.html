@@ -1,31 +1,739 @@
 {% load cms_tags sekizai_tags %}
-<html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!doctype html>
+<html lang="en">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Custom Styles
-        <link rel="stylesheet" href="css/custom.css"> -->
+    {% load static %}
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-        
-        <title>{% page_attribute "page_title" %}</title>
-        {% render_block "css" %}
-    </head>
-    <body>
-        {% cms_toolbar %}
-        {% load menu_tags %}
-        {% placeholder "Epica Logo" %}
-        <ul>
-            {% show_menu 0 100 100 100 %}
-        </ul>
-        {% placeholder "content" %}
-        {% render_block "js" %}
-    </body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+    <link rel="stylesheet" href="{% static "css/menu_effect.css" %}">
+    <link rel="stylesheet" href="{% static "css/typing_effect.css" %}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>EpicaIt</title>
+    {% render_block "css" %}
+</head>
+
+
+<body>
+    {% cms_toolbar %}
+    <section id="navbar-container">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block">
+                    <!-- hidden spacer to center brand on mobile --></span>
+                <div class="navbar-brand nav_logo">
+                    <img src="{% static "img/re_logo.png" %}"">
+                </div>
+                <div class="w-100 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+                <ul class="navbar-nav snip1135 ml-auto flex-nowrap type-navbar">
+                    <li class="nav-item">
+                        <a href="#Epica-Model" class="nav-link smooth-scroll" data-toggle="collapse"
+                            data-target="#myNavbar7">Epica
+                            Model</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#About-Us" class="nav-link smooth-scroll" data-toggle="collapse"
+                            data-target="#myNavbar7">About
+                            Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Technology-Capital" class="nav-link smooth-scroll" data-toggle="collapse"
+                            data-target="#myNavbar7">Technology Capital</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Video" class="nav-link smooth-scroll" data-toggle="collapse"
+                            data-target="#myNavbar7">The Right
+                            Fit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Contact" class="nav-link smooth-scroll" data-toggle="collapse"
+                            data-target="#myNavbar7">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section id="Hero" class="container-fluid hero"
+        style="background-image: url('{% static 'img/longex_s_d_c.jpg' %}')">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Large -->
+                <div class="hero-container block d-none d-md-block">
+                    <h1>
+                        Nearshore
+                        <span class="for">for</span>
+                        <br />
+                        Startups
+                        <br />
+                        <span class="feat">feat</span>
+                        <br />
+                        <span class="words-wrapper-container">
+                            <div class="dynamic-title cd-headline clip is-full-width">
+                                <span class="cd-words-wrapper">
+                                    <b class="is-visible"><span>Technology Capital</span></b>
+                                    <b><span>Design thinking</span></b>
+                                    <b><span>Lean startup</span></b>
+                                    <b><span>Agil development</span></b>
+                                    <b><span>DevOps</span></b>
+                                </span>
+                            </div>
+                        </span>
+                    </h1>
+                </div>
+
+
+                <!-- Mobile -->
+                <div class="block d-block d-md-none" style="padding-left: 1.4em;">
+                    <h1 style="color: white; font-size: 56px; line-height: 0.8em;">
+                        Nearshore
+                        <div>
+                            <span style="color: #ff3300; font-size: 35px;">for</span>
+                            <span style="font-size: 49px;">Startups</span>
+                        </div>
+                        <span style="font-size: 35px;">feat</span>
+
+                        <span style="color: #ff3300; font-size: 28px;line-height: 38px;">
+                            <span class="words-wrapper-container">
+                                <div class="dynamic-title cd-headline clip is-full-width">
+                                    <span class="cd-words-wrapper">
+                                        <b class="is-visible"><span>Technology Capital</span></b>
+                                        <b><span>Design thinking</span></b>
+                                        <b><span>Lean startup</span></b>
+                                        <b><span>Agil development</span></b>
+                                        <b><span>DevOps</span></b>
+                                    </span>
+                                </div>
+                            </span>
+                        </span>
+                    </h1>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="Epica-Model" class="container-fluid d-flex justify-content-center fly" style="background-color:white;">
+        <div class="row container mtb">
+            <div class="col-lg-5 order-2 order-lg-1 mt_s">
+                {% placeholder "Epica Model Image" %}
+            </div>
+            <div class="col-lg-7 order-1 order-lg-2">
+                {% placeholder "Epica Model Content" %}
+            </div>
+        </div>
+    </section>
+
+    <section id="About-Us" class="container-fluid d-flex justify-content-center fly"
+        style="background-color:whitesmoke;">
+        <div class="row container mt">
+            <div class="col-lg-7">
+                <h1 class="title">About Us</h1>
+                <p>
+                    With over 60 years of combined experience and a deep love for Latin America we were able to craft a
+                    100%
+                    remote software process that guides our developers to deliver Technology Capital at the same time
+                    they are
+                    able to innovate right where they are, the opportunity to be competitive on a global scale. We call
+                    it
+                    <strong>“IMPACT SOFTWARE DEVELOPMENT”</strong>.
+                </p>
+                <div>
+                    <button type="button" class="btn btn_cl collap" data-toggle="collapse" data-target="#collapse1">
+                        <i class="fa fa-plus flat-icon"></i>
+                        WE KNOW SOFTWARE then WE KNOW LATIN AMERICA</button>
+                    <div id="collapse1" class="collapse" data-parent="#About-Us">
+                        We realized there was an opportunity to harness all that creativity that Latin American culture
+                        has to
+                        offer.
+                        We developed a process that is able to systematically deliver Technology Capital at the same
+                        time it
+                        provides
+                        talented individuals with an opportunity to enjoy the flexibility to live from their talent
+                        anywhere they
+                        want
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn_cl collap" data-toggle="collapse" data-target="#collapse2">
+                        <i class="fa fa-plus"></i>
+                        <span>We understand the challenges of developing in the region</span></button>
+                    <div id="collapse2" class="collapse" data-parent="#About-Us">
+                        So, we took it upon ourselves to figure out how to work around them. We are convinced that it is
+                        not the air
+                        of the bay that makes developers in Silicon Valley more innovative than the ones in Buenos
+                        Aires, but the
+                        access to opportunity. We are committed to bringing those types of opportunities to talented
+                        individuals
+                        which
+                        has a huge impact on talent retention because, in order to get innovators to innovate having
+                        access to the
+                        right opportunities can make all the difference.
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn_cl collap" data-toggle="collapse" data-target="#collapse3">
+                        <i class="fa fa-plus flat-icon"></i>
+                        Our core group of technologists</button>
+                    <div id="collapse3" class="collapse" data-parent="#About-Us">
+                        have of course, a background that leans heavily as you’d expect in software development but what
+                        really
+                        makes
+                        us different is we are also highly versed in complementary areas to software, like Product
+                        Design,
+                        Experience
+                        Design, Project / Product Management and technology libraries that are proven to smooth the
+                        development
+                        lifecycle and use life of the applications we build, and are flexible enough to build, according
+                        to your
+                        access to capital or revenue flow. The result is Epica’s process a disciplined implementation of
+                        today’s top
+                        methodologies that is technology agnostic and is designed to navigate a product from idea, to
+                        Technology
+                        Capital in the least amount of time without sacrificing quality.
+                    </div>
+                </div>
+                <p>
+                    Because <strong>when the process IS the constant</strong> and you are able to harness the
+                    creativity, passion
+                    and iconic joie de vivre of cyber nomads in a <strong>talent pool of 33 countries throughout LATAM,
+                        the
+                        possibilities are endless!</strong>
+                </p>
+            </div>
+
+            <div
+                class="col-lg-5 recent_work bg_image text-white mtb_s d-flex align-items-center justify-content-center">
+                <div>
+                    <div>
+                        <div class="text-center">
+                            <h2>Recent work</h2>
+                            <div class="text-center">
+                                <button class="btn btn-light" data-toggle="modal" data-target="#work">
+                                    Case Studies</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <div class="text-center">
+                            <h2>How we do it?</h2>
+                            <div class="spacing"></div>
+                            <div class="call-btn text-center wow move-up">
+                                <button class="btn btn-light" data-toggle="modal" data-target="#process">
+                                    EPICA’s process</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="work" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="work">Recent Work</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/re_cs.jpg" alt="Recent Work">
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="process" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="process">Epica’s Process</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/re_ep.jpg" alt="Epica’s Process">
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="Team" class="container-fluid d-flex justify-content-center fly" style="background-color: whitesmoke;">
+
+        <!--Large-->
+        <div class="container d-none d-md-block mb">
+            <div class="row rounded">
+                <div class="col-12">
+                    <h1 class="title" style="margin: 49px 0px;">Our Team of Technologists</h1>
+                </div>
+                <div class="col-3 team-avatar">
+                    <img src="img/re_temp.jpg">
+                    <div class="team-caption">
+                        <div class="text-center">
+                            <h5>Erick Zarza</h5>
+                            <p>Technical Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 team-avatar">
+                    <img src="img/re_cf.jpg">
+                    <div class="team-caption">
+                        <div class="text-center">
+                            <h5>Cynthia Flores-Zarza</h5>
+                            <p>Founder / Project Builder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 team-avatar">
+                    <img src="img/re_lb.jpg">
+                    <div class="team-caption">
+                        <div class="text-center">
+                            <h5>Leonardo J. Barreto</h5>
+                            <p>Tech Lead</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 team-avatar">
+                    <img src="img/re_me.jpg">
+                    <div class="team-caption">
+                        <div class="text-center">
+                            <h5>Leonardo D. Barreto</h5>
+                            <p>Front-end Developer / Dev Relations Consultant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Small-->
+        <div class="container block d-md-none mb">
+            <div class="col-12">
+                <h1 class="title" style="margin: 0 0 1.4em 0;">Our Team of Technologists</h1>
+
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner rounded carousel_block">
+                        <div class="carousel-item active">
+                            <img src="img/re_temp.jpg" alt="Erick">
+                            <div class="carousel-caption">
+                                <h5>Erick Zarza</h5>
+                                <p>Technical Founder</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/re_cf.jpg" alt="Cynthia">
+                            <div class="carousel-caption">
+                                <h5>Cynthia Flores-Zarza</h5>
+                                <p>Founder / Project Builder</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/re_lb.jpg" alt="Leo">
+                            <div class="carousel-caption">
+                                <h5>Leonardo J. Barreto</h5>
+                                <p>Tech Lead</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/re_me.jpg" alt="Third slide">
+                            <div class="carousel-caption">
+                                <h5>Leonardo D. Barreto</h5>
+                                <p>Front-end Developer / Dev Relations Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="Technology-Capital" class="container-fluid d-flex justify-content-center fly"
+        style="background-color:white;">
+        <div class="row container mtb">
+
+            <div class="col-lg-8">
+                <h1 class="title">Technology Capital</h1>
+
+                <p>
+                    Being a decentralized base of technologists continuously striving for innovation, means we are able
+                    to adapt,
+                    learn and bring the right developer on a project to project basis, are able to pivot as quickly as
+                    the
+                    industry does and are always able to integrate a new expert that brings the particular skill you
+                    need into the
+                    process, if you need a development partner whether it might be:
+                </p>
+                <p>
+                    <div class="dynamic-title cd-headline clip is-full-width">
+                        <span class="cd-words-wrapper">
+                            <b class="is-visible"><span class="gold-title">software</span></b>
+                            <b><span class="gold-title">web or mobile apps from native</span></b>
+                            <b><span class="gold-title">multiplatform and PWA’s</span></b>
+                            <b><span class="gold-title">Software Development for Windows</span></b>
+                            <b><span class="gold-title">Mac & Linux environments</span></b>
+                            <b><span class="gold-title">AI</span></b>
+                            <b><span class="gold-title">Machine learning</span></b>
+                            <b><span class="gold-title">R&D</span></b>
+                        </span>
+                    </div>
+                </p>
+                <p><br>We are able to put together the right professionals and integrate them into a proven process to
+                    deliver
+                    Technology Capital you can lean your startup growth against.
+                </p>
+                <p><strong>Technology Capital means a code base that is...</strong></p>
+
+                <div id="inter">
+                    <div>
+                        <button type="button" class="btn btn_cl collap" data-toggle="collapse"
+                            data-target="#collapsetc1">
+                            <i class="fa fa-plus"></i>
+                            Interoperable</button>
+                        <div id="collapsetc1" class="collapse" data-parent="#inter">
+                            We know the solutions we build for you will need to be part of the systems you need to run
+                            your business
+                            thus,
+                            we integrate old product versions, iterate to new versions and migrate, we integrate mobile
+                            apps with web
+                            applications desktop applications & IoT, we architect cloud solutions in Azure & AW, build
+                            APIs from
+                            scratch
+                            to be integrated with your vendor of choice API’s and external databases, we use service
+                            buses and
+                            integration
+                            services all thinking in terms of building a secure technological environment free of
+                            vulnerabilities
+                            where
+                            your brand peacefully co-exists, your users are happy and their data is always safe.
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn_cl collap" data-toggle="collapse"
+                            data-target="#collapsetc2">
+                            <i class="fa fa-plus"></i>
+                            Scalable</button>
+                        <div id="collapsetc2" class="collapse" data-parent="#inter">
+                            We understand the Startup dilemma, we excel at helping our clients ﬁnd the right balance
+                            between budget
+                            and
+                            scalability. From the point of inception, when your codebase is small, the cost is low and
+                            the impact on
+                            users
+                            is minimal, we focus on modularization & micro-services using container tools like docker &
+                            kubernetes.
+                        </div>
+                    </div>
+                </div>
+
+                <p><strong>In other words, peace of mind and reduced burn rate.</strong></p>
+
+            </div>
+
+            <div class="col-lg-4 mtb_s">
+                <img src="img/re_hat.jpg">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="Video" class="container-fluid d-flex justify-content-center fly" style="background-color:whitesmoke;">
+        <div class="row container mtb">
+            <div class="col-12" style="text-align: center;">
+                <h1 class="title">The Right Fit</h1>
+                <!--<img style="margin-top: 49px; max-width: 100%;" src="img/re_tn.jpg">-->
+                <div class="embed-youtube">
+                    <iframe src="https://www.youtube.com/embed/VDeqIzFEkyg" allowfullscreen width="840"
+                        height="473"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Dual" class="container-fluid d-flex justify-content-center fly" style="background-color:white;">
+        <!--Large-->
+        <div class="container d-none d-xl-block mtb">
+            <div class="row text-white">
+                <div class="col-lg-6" style="padding: 2em;">
+                    <div class="dual dual_bg1">
+                        <div class="mb-5">
+                            <p>
+                                So, you’ve been contemplating the idea of nearshore but seems almost impossible to find
+                                the
+                                right mix of technology, quality code, volume, and price for your early stage StartUp
+                                development
+                                needs? We know the standard nearshore model is not inherently the right fit for the
+                                agility, level
+                                of innovation and focus on KPI’s a Startup requires & this is what makes us radically
+                                different from
+                                other nearshore options: WE SPEAK STARTUP.
+                            </p>
+                            <p>
+                                Our growth strategy is not based on headcount, we know Startups need their IT investment
+                                to stretch
+                                and retract according to revenue / investment flow. We aim to become a Nearshore Seed
+                                Accelerator &
+                                that means the brands we help build today, will help us build the reputation and create
+                                the Investment
+                                Fund we will need in the future, therefore for us, it is every bit as much about your
+                                successful exit
+                                as it is for you.
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <a class="smooth-scroll" href="#Contact">
+                                <button class="btn btn-light">What would you like to build?</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="padding: 2em;">
+                    <div class="dual dual_bg2">
+                        <div class="mb-5">
+                            <p>
+                                Do you consider yourself an innovator? Would love to work independently, are capable of
+                                collaborating
+                                with professionals anywhere in the world and look at mobility as a key factor for
+                                work-life balance?
+                                Epica’s business model takes cues from “direct trade” and runs on a system called ROWE
+                                (Results only
+                                work environment) which allows you to work anytime, anywhere as long as consistently
+                                deliver results
+                                sprint by sprint.
+                            </p>
+                            <p>
+                                After having to move to pursue opportunity, we realized that there’s a lot of people
+                                like us, wishing
+                                they did not have to move. We decided that being 2019 and all, we needed to bring the
+                                right kind of
+                                opportunity to talented folks right where they want to live, whether that be the sandy
+                                beaches of
+                                Florianopolis, Brazil, or wine country in Ensenada, Mexico, allowing them to be happier
+                                and more prone
+                                to innovation
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <a class="smooth-scroll" href="#Contact">
+                                <button class="btn btn-light">Let's create together!</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Small-->
+        <div class="container d-xl-none mtb">
+
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+
+                    <div class="thumb mt-5" style="text-align: center;">
+                        <img src="/img/re_sq1.jpg">
+                        <p class="mtb_s rsp_sbtl"><strong>What would you like to build?</strong></p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div>
+                        <p>
+                            So, you’ve been contemplating the idea of nearshore but seems almost impossible to find the
+                            right mix of
+                            technology, quality code, volume, and price for your early stage StartUp development needs?
+                            We know the standard nearshore model is not inherently the right fit for the agility, level
+                            of innovation
+                            and focus on KPI’s a Startup requires & this is what makes us radically different from other
+                            nearshore
+                            options: <strong>WE SPEAK STARTUP</strong>.
+                        </p></br>
+                        <p>
+                            Our growth strategy is not based on headcount, we know Startups need their IT investment to
+                            stretch and
+                            retract according to revenue / investment flow.
+                            We aim to become a Nearshore Seed Accelerator & that means the brands we help build today,
+                            will help us
+                            build the reputation and create the Investment Fund we will need in the future, therefore
+                            for us, it is
+                            every bit as much about your successful exit as it is for you
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-5">
+                <div class="col-lg-4">
+
+                    <div class="thumb" style="text-align: center;">
+                        <img src="/img/re_sq.jpg">
+                        <p class="mtb_s rsp_sbtl"><strong>Let's create together!</strong></p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div>
+                        <p>
+                            Do you consider yourself an innovator? Would love to work independently, are capable of
+                            collaborating with
+                            professionals anywhere in the world and look at mobility as a key factor for work-life
+                            balance?
+                            Epica’s business model takes cues from “direct trade” and runs on a system called ROWE
+                            (Results only work
+                            environment) which allows you to work anytime, anywhere as long as consistently deliver
+                            results sprint by
+                            sprint.
+                        </p></br>
+                        <p>
+                            After having to move to pursue opportunity, we realized that there’s a lot of people like
+                            us, wishing they
+                            did not have to move. We decided that being 2019 and all, we needed to bring the right kind
+                            of opportunity
+                            to talented folks right where they want to live, whether that be the sandy beaches of
+                            Florianopolis,
+                            Brazil, or wine country in Ensenada, Mexico, allowing them to be happier and more prone to
+                            innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="Contact" class="container-fluid d-flex justify-content-center fly"
+        style="background-color:whitesmoke;">
+
+
+        <div class="row container mtb justify-content-center">
+            <div class="col-12">
+                <h1 class="title text-center">Send us a Message</h1>
+            </div>
+            <div class="col-12 col-md-6">
+
+                <form>
+                    <div class="form-group mt-5">
+                        <input type="name" class="form-control text-input" id="exampleInputName1" placeholder="Name*">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control text-input" id="exampleInputEmail1"
+                            placeholder="Email*">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control text-input" id="exampleInputPhone1"
+                            placeholder="Phone Number">
+                    </div>
+                    <div class="form-check">
+                        <div><label>Please select your role</label></div>
+                        <div>
+                            <input type="radio" name="role" value="entrepreneur" checked>
+                            <span style="margin-left: 25px;"> Entrepreneur</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="role" value="developer">
+                            <span style="margin-left: 25px;"> Developer</span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <textarea class="form-control text-input" style="min-height: 150px;"
+                            id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn_contact w-100" placeholder="Your Message">Send
+                        Message</button>
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="Footer" class="container-fluid d-flex justify-content-center fly" style="background-color:black;">
+        <div class="row container" style="margin: 49px 0px; color: whitesmoke;">
+            <div class="col-12 col-md-6">
+                <p>
+                    We do Nearshore for Startups with a process that takes Software Products from idea to Technology
+                    Capital in
+                    the least amount of time, without sacrificing quality, at nearshore prices, in the same time zone
+                    with little
+                    to non language nor cultural barrier.
+                </p>
+            </div>
+            <div class="col-1 col-md-3">
+            </div>
+            <div class="col-12 col-md-3 mtb_s" style="text-align: right">
+                <img src="img/re_logo.png">
+                <div style="align-content: center;">
+                    <a href="#"><i class="fa fa-linkedin text-white"></i></a>
+                    <a href="#"><i class="fa fa-twitter text-white"></i></a>
+                </div>
+            </div>
+            <div class="col-12 mt-5" style="text-align: right;">
+                <p class="rsp_algn mtb_s">© 2019 EpicaIt. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- Smooth Scroll -->
+    <script src="{% static "js/smooth_scroll.js" %}"></script>
+    <script src="{% static "js/typing_effect.js" %}"></script>
+
+    {% render_block "js" %}
+
+
+</body>
+
 </html>
