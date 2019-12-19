@@ -24,8 +24,11 @@
     <!-- Icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png'%}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'img/icon.png'%}">
 
-    <title>EpicaIt</title>
+    <title>Dropme</title>
     {% render_block "css" %}
 </head>
 
@@ -50,8 +53,7 @@
                 <ul class="navbar-nav snip1135 ml-auto flex-nowrap type-navbar">
                     <li class="nav-item">
                         <a href="#Epica-Model" class="nav-link smooth-scroll" data-toggle="collapse"
-                            data-target="#myNavbar7">Epica
-                            Model</a>
+                            data-target="#myNavbar7">Epica Modelo</a>
                     </li>
                     <li class="nav-item">
                         <a href="#About-Us" class="nav-link smooth-scroll" data-toggle="collapse"
@@ -157,16 +159,16 @@
                     <button type="button" class="btn btn_cl collap" data-toggle="collapse" data-target="#collapse1">
                         {% placeholder "About Us Collapse Title 1" %}
                     </button>
-                    <div id="collapse1" class="collapse" data-parent="#About-Us">
+                    <div id="collapse1" class="collapse" data-parent="#About-Us" style="font-size: 14px;">
                         {% placeholder "About Us Collapse Content 1" %}
                     </div>
                 </div>
                 <div>
                     <button type="button" class="btn btn_cl collap" data-toggle="collapse" data-target="#collapse2">
-                        <!--<i class="fa fa-plus"></i>-->
+   
                         {% placeholder "About Us Collapse Title 2" %}
                     </button>
-                    <div id="collapse2" class="collapse" data-parent="#About-Us">
+                    <div id="collapse2" class="collapse" data-parent="#About-Us" style="font-size: 14px;">
                         {% placeholder "About Us Collapse Content 2" %}
                     </div>
                 </div>
@@ -174,7 +176,7 @@
                     <button type="button" class="btn btn_cl collap" data-toggle="collapse" data-target="#collapse3">
                         {% placeholder "About Us Collapse Title 3" %}
                         </button>
-                    <div id="collapse3" class="collapse" data-parent="#About-Us">
+                    <div id="collapse3" class="collapse" data-parent="#About-Us" style="font-size: 14px;">
                         {% placeholder "About Us Collapse Content 3" %}
                     </div>
                 </div>
@@ -188,8 +190,8 @@
                       <div class="text-center">
                         <h2>Recent work</h2>
                         <div class="text-center">
-                          <button class="btn btn-light" data-toggle="modal" data-target="#work">
-                            Case Studies</button>
+                          <a href="{% static 'Epica_CaseStudies.pdf' %}" class="btn btn-light" target="_new" style="color:#333">
+                            Case Studies</a>
                         </div>
                       </div>
                     </div>
@@ -245,7 +247,7 @@
     </section>
 
     <section id="Team" class="container-fluid d-flex justify-content-center fly" style="background-color: whitesmoke;">
-
+    
         <!--Large-->
         <div class="container d-none d-md-block mb">
             <div class="row rounded">
@@ -254,6 +256,7 @@
                 </div>
                 <div class="col-3 team-avatar">
                     {% placeholder "Team Picture 1" %}
+                    
                     <div class="team-caption">
                         <div class="text-center">
                             <a class="mr-4" href="https://www.linkedin.com/in/erick-zarza/">
@@ -282,7 +285,7 @@
                     {% placeholder "Team Picture 3" %}
                     <div class="team-caption">
                         <div class="text-center">
-                            <a href="https://www.linkedin.com/in/leonardo-barreto-572928107">
+                            <a href="https://www.linkedin.com/in/leonardo-j-barreto">
                                 <i class="fa fa-linkedin team_social"></i></a>
                             <h5>Leonardo J. Barreto</h5>
                             <p>Tech Lead</p>
@@ -302,7 +305,7 @@
                 </div>
             </div>
         </div>
-
+    
         <!--Small-->
         <div class="container block d-md-none mb">
             <div class="col-12">
@@ -314,7 +317,7 @@
                     <div class="carousel-inner rounded carousel_block">
                         <div class="carousel-item active">
                             <div class="team_mobile_bg">
-                                {% placeholder "Team Picture 1" %}
+                                {% placeholder "Team Picture 1 Mobile" %}
                             </div>
                             <div class="carousel-caption">
                                 <a class="mr-4" href="https://www.linkedin.com/in/erick-zarza/">
@@ -327,7 +330,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="team_mobile_bg">
-                                {% placeholder "Team Picture 2" %}
+                                {% placeholder "Team Picture 2 Mobile" %}
                             </div>
                             <div class="carousel-caption">
                                 <a class="mr-4" href="https://www.linkedin.com/in/cynthiazarza/">
@@ -339,10 +342,10 @@
                         </div>
                         <div class="carousel-item">
                             <div class="team_mobile_bg">
-                                {% placeholder "Team Picture 3" %}
+                                {% placeholder "Team Picture 3 Mobile" %}
                             </div>
                             <div class="carousel-caption">
-                                <a href="https://www.linkedin.com/in/leonardo-barreto-572928107">
+                                <a href="https://www.linkedin.com/in/leonardo-j-barreto">
                                     <i class="fa fa-linkedin team_social"></i></a>
                                 <h5>Leonardo J. Barreto</h5>
                                 <p>Tech Lead</p>
@@ -350,7 +353,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="team_mobile_bg">
-                                {% placeholder "Team Picture 4" %}
+                                {% placeholder "Team Picture 4 Mobile" %}
                             </div>
                             <div class="carousel-caption" style="top: 44%;">
                                 <h5>Leonardo D. Barreto</h5>
@@ -402,7 +405,7 @@
                             data-target="#collapsetc1">
                             {% placeholder "Technology Capital Collapse Title 1" %}
                         </button>
-                        <div id="collapsetc1" class="collapse" data-parent="#inter">
+                        <div id="collapsetc1" class="collapse" data-parent="#inter" style="font-size: 14px;">
                             {% placeholder "Technology Capital Collapse Content 1" %}
                         </div>
                     </div>
@@ -411,7 +414,7 @@
                             data-target="#collapsetc2">
                             {% placeholder "Technology Capital Collapse Title 2" %}
                         </button>
-                        <div id="collapsetc2" class="collapse" data-parent="#inter">
+                        <div id="collapsetc2" class="collapse" data-parent="#inter" style="font-size: 14px;">
                             {% placeholder "Technology Capital Collapse Content 2" %}
                         </div>
                     </div>
@@ -431,7 +434,7 @@
             <div class="col-12" style="text-align: center;">
                 {% placeholder "The Right Fit Title" %}
                 <div class="embed-youtube">
-                    <iframe src="https://www.youtube.com/embed/VDeqIzFEkyg" allowfullscreen width="840"
+                    <iframe src="https://www.youtube.com/embed/8DKqviYcG4o" allowfullscreen width="840"
                         height="473"></iframe>
                 </div>
             </div>
@@ -482,26 +485,7 @@
                 </div>
                 <div class="col-lg-8">
                     <div>
-                        <p>
-                            So, you’ve been contemplating the idea of nearshore but seems almost impossible to find the
-                            right mix of
-                            technology, quality code, volume, and price for your early stage StartUp development needs?
-                            We know the standard nearshore model is not inherently the right fit for the agility, level
-                            of innovation
-                            and focus on KPI’s a Startup requires & this is what makes us radically different from other
-                            nearshore
-                            options: <strong>WE SPEAK STARTUP</strong>.
-                        </p></br>
-                        <p>
-                            Our growth strategy is not based on headcount, we know Startups need their IT investment to
-                            stretch and
-                            retract according to revenue / investment flow.
-                            We aim to become a Nearshore Seed Accelerator & that means the brands we help build today,
-                            will help us
-                            build the reputation and create the Investment Fund we will need in the future, therefore
-                            for us, it is
-                            every bit as much about your successful exit as it is for you
-                        </p>
+                        {% placeholder "Dual 1 Text" %}
                     </div>
                 </div>
             </div>
@@ -516,27 +500,7 @@
                 </div>
                 <div class="col-lg-8">
                     <div>
-                        <p>
-                            Do you consider yourself an innovator? Would love to work independently, are capable of
-                            collaborating with
-                            professionals anywhere in the world and look at mobility as a key factor for work-life
-                            balance?
-                            Epica’s business model takes cues from “direct trade” and runs on a system called ROWE
-                            (Results only work
-                            environment) which allows you to work anytime, anywhere as long as consistently deliver
-                            results sprint by
-                            sprint.
-                        </p></br>
-                        <p>
-                            After having to move to pursue opportunity, we realized that there’s a lot of people like
-                            us, wishing they
-                            did not have to move. We decided that being 2019 and all, we needed to bring the right kind
-                            of opportunity
-                            to talented folks right where they want to live, whether that be the sandy beaches of
-                            Florianopolis,
-                            Brazil, or wine country in Ensenada, Mexico, allowing them to be happier and more prone to
-                            innovation.
-                        </p>
+                            {% placeholder "Dual 2 Text" %}
                     </div>
                 </div>
             </div>

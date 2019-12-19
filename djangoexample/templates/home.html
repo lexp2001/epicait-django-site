@@ -24,6 +24,9 @@
     <!-- Icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png'%}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'img/icon.png'%}">
 
     <title>EpicaIt</title>
     {% render_block "css" %}
@@ -188,8 +191,8 @@
                       <div class="text-center">
                         <h2>Recent work</h2>
                         <div class="text-center">
-                          <button class="btn btn-light" data-toggle="modal" data-target="#work">
-                            Case Studies</button>
+                          <a href="{% static 'Epica_CaseStudies.pdf' %}" class="btn btn-light" target="_new" style="color:#333">
+                            Case Studies</a>
                         </div>
                       </div>
                     </div>
