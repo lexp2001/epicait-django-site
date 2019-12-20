@@ -157,6 +157,7 @@ SITE_ID = 1
 
 CMS_TEMPLATES = [
     ('home.html', 'Home page template'),
+    ('dropme.html', 'Testing page template'),
 ]
 
 MEDIA_URL = "/media/"
