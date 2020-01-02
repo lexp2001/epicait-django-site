@@ -191,11 +191,4 @@ CMSPLUGIN_CONTACT_PLUS_TEMPLATES = [
 ]
 
 # Email Settings
-# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'erick.zarza@epicait.com'
+# SENDGRID section deleted for security reason
