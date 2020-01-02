@@ -71,7 +71,7 @@
                             Fit</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Contact" class="nav-link smooth-scroll" data-toggle="collapse"
+                        <a href="#contact-form" class="nav-link smooth-scroll" data-toggle="collapse"
                             data-target="#myNavbar7">Contact
                             Us</a>
                     </li>
@@ -510,53 +510,18 @@
 
     </section>
 
-    <section id="Contact" class="container-fluid d-flex justify-content-center fly"
+    <section id="contact-form" class="container-fluid d-flex justify-content-center fly"
         style="background-color:whitesmoke;">
 
 
         <div class="row container mtb justify-content-center">
-            <div class="col-12">
+            <div class="col-12 mb-5">
                 <h1 class="title text-center">Send us a Message</h1>
             </div>
             <div class="col-12 col-md-6">
-
-                <form>
-                    <div class="form-group mt-5">
-                        <input type="name" class="form-control text-input" id="exampleInputName1" placeholder="Name*">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control text-input" id="exampleInputEmail1"
-                            placeholder="Email*">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" class="form-control text-input" id="exampleInputPhone1"
-                            placeholder="Phone Number">
-                    </div>
-                    <div class="form-check">
-                        <div><label>Please select your role</label></div>
-                        <div>
-                            <input type="radio" name="role" value="entrepreneur" checked>
-                            <span style="margin-left: 25px;"> Entrepreneur</span>
-                        </div>
-                        <div>
-                            <input type="radio" name="role" value="developer">
-                            <span style="margin-left: 25px;"> Developer</span>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <textarea class="form-control text-input" style="min-height: 150px;"
-                            id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn_contact w-100" placeholder="Your Message">Send
-                        Message</button>
-                </form>
-
+                {% placeholder "Contact Form" %}
             </div>
         </div>
-
     </section>
 
     <section id="Footer" class="container-fluid d-flex justify-content-center fly" style="background-color:black;">

@@ -40,18 +40,24 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'djangoexample',
+    'django.contrib.sitemaps',
     'cms',
     'menus',
     'treebeard',
     'sekizai',
     'filer',
     'easy_thumbnails',
-    'mptt',
+    'djangocms_column',
+    'djangocms_style',
+    'djangocms_snippet',
     'djangocms_text_ckeditor',
     'djangocms_link',
     'djangocms_file',
     'djangocms_picture',
+    'djangocms_googlemap',
     'djangocms_video',
+    'adminsortable',
+    'cmsplugin_contact_plus',
 ]
 
 MIDDLEWARE = [
@@ -72,10 +78,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangoexample.urls'
 
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'djangoexample', 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,6 +94,7 @@ TEMPLATES = [
                 'sekizai.context_processors.sekizai',
                 'cms.context_processors.cms_settings',
                 'django.template.context_processors.i18n',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -150,6 +159,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'djangoexample', 'static'),
+)
 
 # Django CMS Settings
 
@@ -171,3 +183,19 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+# Contact form templates
+CMSPLUGIN_CONTACT_PLUS_TEMPLATES = [
+    ('cmsplugin_contact_plus/contact.html', 'Contact Form'),
+    ('cmsplugin_contact_plus/contact_epica.html', 'Newsletter Form'),
+]
+
+# Email Settings
+# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'erick.zarza@epicait.com'

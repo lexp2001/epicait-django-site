@@ -1,0 +1,37 @@
+{% load l10n %}
+
+{% if form %}
+    {% if form.is_multipart %}
+        <form enctype="multipart/form-data" method="POST" action="">
+    {% else %}
+       <form method="POST" action="">
+    {% endif %}
+	{% csrf_token %}
+        <div class="row">
+            <div class="fieldWrapper col-lg-12">
+                {{ form.name.errors }}
+                {{ form.name }}
+            </div>
+            <div class="fieldWrapper col-lg-12 mt--10">
+                {{ form.email.errors }}
+                {{ form.email }}
+            </div>
+            <div class="fieldWrapper col-lg-12 mt--10">
+                {{ form.phone.errors }}
+                {{ form.phone }}
+            </div>
+            <div class="fieldWrapper col-lg-12 mt--10">
+                {{ form.message.errors }}
+                {{ form.message }}
+            </div>
+            <div class="col-lg-12 mt--10">
+                <input type="submit" name="contact_plus_form_{{ contact.id|unlocalize }}" {% if contact.submit_button_text %} value="{{ contact.submit_button_text }}"{% endif %} />
+            </div>
+        </div>
+	</form>
+{% else %}
+	{{ contact.thanks|safe }}
+{% endif %}
+
+
+    

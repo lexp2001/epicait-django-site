@@ -259,9 +259,25 @@ h2 {
     color: #660000 !important;
 }
 
-.btn_contact {
+.btn_contact, form input[type="submit"] {
     background-color:#003333 !important;
     border-color: #002020 !important;
+}
+
+form input[type="submit"] {
+    cursor: pointer;
+    padding: .7em 1.4em;
+    font-weight: 500 !important;
+    width: 100%!important;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    border: 1px;
+}
+
+form input[type="submit"]:hover {
+    background-color:#034747 !important;
 }
 
 .btn_cl {
@@ -281,7 +297,7 @@ h2 {
 }
 
 /* Form styles */
-form .text-input {
+form .text-input, form input[type="text"], form textarea {
     color: #777;
     border-color: #eee;
     background-color: white;
@@ -293,6 +309,25 @@ form .text-input {
     padding: 3px 20px;
     font-size: 14px;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+form textarea {
+    height: unset;
+}
+
+form label {
+    display: none ;
+}
+
+form [for="id_i-am-a-developer"] {
+    display: block !important;
+    float:left;
+    font-size: 14px;
+    margin-left: 21px;
+}
+
+form [type="checkbox"] {
+    margin-left: 10px;
 }
 
 /* Extra Large */
